@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run Docker Image",
+        "type": "docker-run",
+        "dockerRun": {
+          "image": "leiqian/catnip",
+          "args": ["your-argument"],
+          "env": {
+            "ENV_VAR": "value"
+          },
+          "ports": [
+            {
+              "containerPort": 5000,
+              "hostPort": 8888
+            }
+          ]
+        }
+      }
+    ]
+  }
